@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 module.exports = {
 	init: () => {
-		mongoose.connect('mongodb://localhost/mongo_sandbox', { useMongoClient: true });
+		mongoose.connect('mongodb://localhost:27017/mongo_sandbox', { useMongoClient: true });
 		mongoose.connection
 			.once('open', () => console.log('Connection open!'))
 			.on('error', (error) => {
