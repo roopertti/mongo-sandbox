@@ -1,8 +1,11 @@
 'use strict';
 const assert = require('assert');
+const User = require('../schema/user');
 
 describe('Creating records', () => {
 	it('saves a user', () => {
-		assert(1 + 1 === 2);
+		const joe = new User({ name: "Joe"});
+		
+		joe.save();
 	});
 });
